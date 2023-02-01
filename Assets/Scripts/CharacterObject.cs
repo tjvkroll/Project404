@@ -17,6 +17,10 @@ public class CharacterObject : MonoBehaviour
     public float gravity;
     public Vector3 friction = new Vector3(.90f, .99f, .90f);
 
+    // TEMP
+    public List<GunBase> guns;
+    public bool isShooting;
+
     void OnEnable() { controls.Enable(); }
 
     void OnDisable() { controls.Disable(); }
@@ -30,13 +34,17 @@ public class CharacterObject : MonoBehaviour
         controls.PlayerIMap.ShootLook.performed += ctx => { rightStick = ctx.ReadValue<Vector2>(); };
         controls.PlayerIMap.ShootLook.canceled += ctx => { rightStick = new Vector2(0, 0); };
 
-        controls.PlayerIMap.Shoot.performed += ctx => { Shoot(); };
+        controls.PlayerIMap.Shoot.performed += ctx => { isShooting = true; };
+        controls.PlayerIMap.Shoot.canceled += ctx => { isShooting = false; };
         main_cam = Camera.main;
     }
 
     private void Shoot()
     {
-
+        Debug.Log("Shootin");
+        foreach (GunBase gun in guns) {
+            gun.OnShoot();
+        }
     }
 
     private void OnDodge()
@@ -60,6 +68,8 @@ public class CharacterObject : MonoBehaviour
             float angle = MathF.Atan2(rightStick.x, rightStick.y) * Mathf.Rad2Deg + main_cam.transform.eulerAngles.y;
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }
+
+        if (isShooting) Shoot();
 
         movement.y += gravity;
         myController.Move(movement);

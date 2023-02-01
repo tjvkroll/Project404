@@ -12,6 +12,8 @@ public class EnemyTurretController : MonoBehaviour
     public Gradient onHitBodyGradient;
 
     public float flashOnHitDuration = 0.5f;
+    public List<GunBase> guns;
+
     void Start()
     {
         playerTrans = GameObject.FindGameObjectWithTag("Player").transform.Find("LockOnSnap");
@@ -21,6 +23,17 @@ public class EnemyTurretController : MonoBehaviour
     {
         // Look at
         turretTransform.LookAt(playerTrans, Vector3.up);
+        if (Vector3.Distance(playerTrans.position, transform.position) <= attackRange)
+        {
+            Shoot();    
+        }
+    }
+
+    private void Shoot()
+    {
+        foreach (GunBase gun in guns) {
+            gun.OnShoot();
+        }
     }
 
     public void OnTakeDamage()
