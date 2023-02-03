@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2282768999812447149}
-  - component: {fileID: 2282768999812447146}
+  - component: {fileID: 1150259594255591067}
   m_Layer: 0
   m_Name: SimpleGun
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2282768999812447146
+--- !u!114 &1150259594255591067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,20 +42,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2282768999812447148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6406dd5192c502f4dbda735c7900deb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 28d9118c0b863db4e9bf862484e71215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
   knockBack: 3
-  fireRate: 0.1
+  fireRate: 0.25
   speed: 3
-  explosionPower: 100
-  TTL: 3
+  explosionPower: 0
+  TTL: 2
   explosive: 0
-  isFriendly: 1
-  piercing: 1
+  isFriendly: 0
+  piercing: 0
   canFire: 0
-  bullet: {fileID: 4155240081662911712, guid: f30ae3b05c5cea741a88180b061c02ce, type: 3}
+  bullet: {fileID: 4155240081662911712, guid: 59d5f433849b9894983f6bdf11127727, type: 3}
 --- !u!1 &2282769000886299584
 GameObject:
   m_ObjectHideFlags: 0

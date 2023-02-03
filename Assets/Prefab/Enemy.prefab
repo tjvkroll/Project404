@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7999682784075350387}
   - component: {fileID: 7999682784075350386}
   - component: {fileID: 7511724367500020785}
-  - component: {fileID: 5259955778850006115}
+  - component: {fileID: 2930679466386265561}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -64,9 +64,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 1, z: 1}
-  m_Center: {x: 0, y: 1.5, z: 0}
---- !u!114 &5259955778850006115
+  m_Size: {x: 2.5, y: 3.5, z: 2.5}
+  m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &2930679466386265561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,17 +75,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 7999682784075350385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c2d97a6f8a201a41965ac6f670b9f04, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e8307778cbea9c4a9955f1a1f2d686c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerTrans: {fileID: 0}
-  mycontroller: {fileID: 0}
-  moveSpeed: 0.5
+  mycontroller: {fileID: 7999682784075350386}
+  moveSpeed: 0.3
   gravity: -1
-  attackRange: 8
+  attackRange: 7
   onHitBodyGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0, g: 0, b: 0, a: 1}
     key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -94,8 +94,8 @@ MonoBehaviour:
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 65535
-    ctime2: 0
+    ctime1: 32768
+    ctime2: 65535
     ctime3: 0
     ctime4: 0
     ctime5: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 2
+    m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   flashOnHitDuration: 0.5
 --- !u!1 &7999682784439333260
@@ -174,7 +174,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f31eca7e9cf8d974a9a793f28a495c15, type: 2}
+  - {fileID: 2100000, guid: 65eac8e8ed2a21e4aa26cf79b43232e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
