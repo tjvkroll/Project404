@@ -285,11 +285,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3308871053939057677, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
       propertyPath: piercing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308871053939057677, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: OnShotCreated.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308871053939057677, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: OnShotCreated.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308871053939057677, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: OnShotCreated.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308871053939057677, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: OnShotCreated.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Cinemachine.CinemachineImpulseSource, Cinemachine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308871053939057677, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: OnShotCreated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446167734733175098, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4707665999975737255, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477393161879124294, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: m_Pitch
+      value: -2.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477393161879124294, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: m_Volume
+      value: 0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477393161879124294, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5840165991500364432, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
       propertyPath: piercing
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840165991500364432, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
+      propertyPath: OnShotCreated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70a1deb047327ee449626ecb8629e3ba, type: 3}
@@ -595,9 +639,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456967, z: 0.10938164, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 2.999998, z: 0.0000009536743}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -966,6 +1010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1181833804}
   - component: {fileID: 1181833803}
+  - component: {fileID: 1181833805}
   m_Layer: 0
   m_Name: playerCam
   m_TagString: Untagged
@@ -1027,6 +1072,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1181833805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181833802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
+  m_UseCameraSpace: 1
+  m_ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1405082133
 GameObject:
   m_ObjectHideFlags: 0
