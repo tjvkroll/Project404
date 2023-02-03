@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class Damagable : MonoBehaviour
 {
-    HP hp;
-    void Start()
+  public bool isFriendly = false;
+  void Start()
+  {
+
+  }
+  private void OnTriggerEnter(Collider other)
+  {
+    if (other.CompareTag("Bullet"))
     {
-        hp = GetComponent<HP>();
+      BulletBase bb = other.GetComponent<BulletBase>();
+      if (bb.isFriendly == isFriendly) { return; }
+      if (!bb.piercing)
+      {
+        Destroy(other.gameObject);
+      }
+      BroadcastMessage("OnTakeDamage", bb.damage, SendMessageOptions.DontRequireReceiver);
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Bullet"))
-        {
-            BulletBase bb = other.GetComponent<BulletBase>();
-            if (!bb.piercing)
-            {
-                Destroy(other.gameObject);
-            }
-            hp.OnDamage(bb.damage);
-        }
-    }
+  }
 }

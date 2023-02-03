@@ -159,6 +159,8 @@ GameObject:
   - component: {fileID: 1996166140621643822}
   - component: {fileID: 1996166140621643823}
   - component: {fileID: 3274213022132086995}
+  - component: {fileID: 3662883552891122768}
+  - component: {fileID: 6747953115167086751}
   m_Layer: 0
   m_Name: EnemyTurret
   m_TagString: Untagged
@@ -239,8 +241,35 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  flashOnHitDuration: 0.5
+  flashOnHitDuration: 0.15
   armory: {fileID: 0}
+--- !u!114 &3662883552891122768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996166140621643821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f5f15d5ee6be1408f725fa65942403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 500
+  currentHP: 500
+--- !u!114 &6747953115167086751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996166140621643821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9b53815f6768a44ac7fc2766aed222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFriendly: 0
 --- !u!1 &1996166141065070509
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,10 +399,6 @@ PrefabInstance:
       value: 0.30321676
       objectReference: {fileID: 0}
     - target: {fileID: 2282768999812447149, guid: 9b59a731111d7c04594a024d9bdf1735, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2282768999812447149, guid: 9b59a731111d7c04594a024d9bdf1735, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.001
       objectReference: {fileID: 0}
@@ -456,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2282768999812447149, guid: 9b59a731111d7c04594a024d9bdf1735, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 2282768999812447149, guid: 9b59a731111d7c04594a024d9bdf1735, type: 3}
       propertyPath: m_LocalPosition.y
