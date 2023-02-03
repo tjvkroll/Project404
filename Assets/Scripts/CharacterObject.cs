@@ -16,10 +16,9 @@ public class CharacterObject : MonoBehaviour
     public float dodgePower;
     public float gravity;
     public Vector3 friction = new Vector3(.90f, .99f, .90f);
-
-    // TEMP
-    public List<GunBase> guns;
     public bool isShooting;
+    public Armory armory;
+
 
     void OnEnable() { controls.Enable(); }
 
@@ -37,14 +36,7 @@ public class CharacterObject : MonoBehaviour
         controls.PlayerIMap.Shoot.performed += ctx => { isShooting = true; };
         controls.PlayerIMap.Shoot.canceled += ctx => { isShooting = false; };
         main_cam = Camera.main;
-    }
-
-    private void Shoot()
-    {
-        Debug.Log("Shootin");
-        foreach (GunBase gun in guns) {
-            gun.OnShoot();
-        }
+        armory = GetComponentInChildren<Armory>();
     }
 
     private void OnDodge()
@@ -69,7 +61,7 @@ public class CharacterObject : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }
 
-        if (isShooting) Shoot();
+        if (isShooting) armory.OnShoot();
 
         movement.y += gravity;
         myController.Move(movement);
